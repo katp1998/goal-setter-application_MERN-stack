@@ -1,0 +1,30 @@
+{
+  "name": "goal-setter",
+  "version": "1.0.0",
+  "description": "GOALSETTER",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katp1998/goal-setter-application_MERN-stack.git"
+  },
+  "author": "Kethmie Perera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katp1998/goal-setter-application_MERN-stack/issues"
+  },
+  "homepage": "https://github.com/katp1998/goal-setter-application_MERN-stack#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^6.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
