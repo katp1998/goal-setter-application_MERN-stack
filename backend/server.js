@@ -1,9 +1,14 @@
 const express = require("express");
+const colors = require("colors");
 const dotenv = require("dotenv").config();
 const port = process.env.PORT || 5000;
 const { errorHandler } = require("./middleware/errorMiddleware");
+const connectDB = require("./config/db");
 
 const app = express();
+
+//connecting db
+connectDB();
 
 //to use rq/rs body data, we need to add express middleware -- you can use rq.body thanks to this
 app.use(express.json());
