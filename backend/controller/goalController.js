@@ -55,9 +55,6 @@ const deleteGoals = asyncHandler(async (rq, rs) => {
   }
 
   await goal.remove();
-
-  //const deleteGoal = await Goal.findByIdAndDelete(rq.params.id)
-
   rs.status(200).json({ id: rq.params.id });
 });
 
