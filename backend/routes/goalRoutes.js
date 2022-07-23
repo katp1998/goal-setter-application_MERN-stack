@@ -6,8 +6,9 @@ const {
   updateGoals,
   deleteGoals,
 } = require("../controller/goalController");
+const { protect } = require("../middleware/authMiddleware");
 
-router.route("/").get(getGoals).post(setGoals); //this is done because both these methods use the same route
-router.route("/:id").put(updateGoals).delete(deleteGoals);
+router.route("/").get(protect, getGoals).post(protect, setGoals); //this is done because both these methods use the same route
+router.route("/:id").put(protect, updateGoals).delete(protect, deleteGoals);
 
 module.exports = router;
