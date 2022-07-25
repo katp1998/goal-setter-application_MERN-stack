@@ -31,7 +31,11 @@ function Register() {
     }
     //if isSuccess {and user} states = true
 //if(user){navigate('/')} --> does not work
-    if(isSuccess || user){
+    if(isSuccess){
+      navigate('/login')
+    }
+
+    if(user){
       navigate('/')
     }
 
