@@ -18,7 +18,7 @@ app.use("/api/goals", require("./routes/goalRoutes"));
 app.use("/api/users", require("./routes/userRoutes"));
 
 //serve frontend
-if (process.env.NODE_ENV === "production") {
+/**if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/build")));
   app.get("*", (rq, rs) =>
     rs.sendFile(
@@ -27,7 +27,8 @@ if (process.env.NODE_ENV === "production") {
   );
 } else {
   app.get("/", (rq, rs) => rs.send("Please set to production"));
-}
+} **/
+
 app.use(errorHandler); // this will be overriding the express default error handler
 
 app.listen(port, () => console.log(`Server running on ${port}`));
